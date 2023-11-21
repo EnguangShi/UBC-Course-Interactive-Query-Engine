@@ -28,4 +28,4 @@ In the project folder:
 
 ## Running and testing from an IDE
 
-IntelliJ Ultimate should be automatically configured the first time you open the project (IntelliJ Ultimate is a free download through their students program)
+IntelliJ Ultimate should be automatically configured the first time you open the project
