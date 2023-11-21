@@ -1,0 +1,261 @@
+{
+  "title": "avgLatLon",
+  "input": {
+    "WHERE": {},
+    "OPTIONS": {
+      "COLUMNS": [
+        "rooms_shortname",
+        "avgLatitude",
+        "avgLongitude"
+      ],
+      "ORDER": {
+        "dir": "DOWN",
+        "keys": [
+          "rooms_shortname",
+          "avgLatitude",
+          "avgLongitude"
+        ]
+      }
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "rooms_shortname"
+      ],
+      "APPLY": [
+        {
+          "avgLatitude": {
+            "AVG": "rooms_lat"
+          }
+        },
+        {
+          "avgLongitude": {
+            "AVG": "rooms_lon"
+          }
+        }
+      ]
+    }
+  },
+  "errorExpected": false,
+  "expected": [
+    {
+      "rooms_shortname": "WOOD",
+      "avgLatitude": 49.26,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "WESB",
+      "avgLatitude": 49.27,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "UCLL",
+      "avgLatitude": 49.27,
+      "avgLongitude": -123.26
+    },
+    {
+      "rooms_shortname": "SWNG",
+      "avgLatitude": 49.26,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "SRC",
+      "avgLatitude": 49.27,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "SPPH",
+      "avgLatitude": 49.26,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "SOWK",
+      "avgLatitude": 49.26,
+      "avgLongitude": -123.26
+    },
+    {
+      "rooms_shortname": "SCRF",
+      "avgLatitude": 49.26,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "PHRM",
+      "avgLatitude": 49.26,
+      "avgLongitude": -123.24
+    },
+    {
+      "rooms_shortname": "PCOH",
+      "avgLatitude": 49.26,
+      "avgLongitude": -123.26
+    },
+    {
+      "rooms_shortname": "OSBO",
+      "avgLatitude": 49.26,
+      "avgLongitude": -123.24
+    },
+    {
+      "rooms_shortname": "ORCH",
+      "avgLatitude": 49.26,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "MGYM",
+      "avgLatitude": 49.27,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "MCML",
+      "avgLatitude": 49.26,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "MCLD",
+      "avgLatitude": 49.26,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "MATX",
+      "avgLatitude": 49.27,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "MATH",
+      "avgLatitude": 49.27,
+      "avgLongitude": -123.26
+    },
+    {
+      "rooms_shortname": "LSK",
+      "avgLatitude": 49.27,
+      "avgLongitude": -123.26
+    },
+    {
+      "rooms_shortname": "LSC",
+      "avgLatitude": 49.26,
+      "avgLongitude": -123.24
+    },
+    {
+      "rooms_shortname": "LASR",
+      "avgLatitude": 49.27,
+      "avgLongitude": -123.26
+    },
+    {
+      "rooms_shortname": "IONA",
+      "avgLatitude": 49.27,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "IBLC",
+      "avgLatitude": 49.27,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "HENN",
+      "avgLatitude": 49.27,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "HEBB",
+      "avgLatitude": 49.27,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "GEOG",
+      "avgLatitude": 49.27,
+      "avgLongitude": -123.26
+    },
+    {
+      "rooms_shortname": "FSC",
+      "avgLatitude": 49.26,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "FRDM",
+      "avgLatitude": 49.27,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "FORW",
+      "avgLatitude": 49.26,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "FNH",
+      "avgLatitude": 49.26,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "ESB",
+      "avgLatitude": 49.26,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "EOSM",
+      "avgLatitude": 49.26,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "DMP",
+      "avgLatitude": 49.26,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "CIRS",
+      "avgLatitude": 49.26,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "CHEM",
+      "avgLatitude": 49.27,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "CHBE",
+      "avgLatitude": 49.26,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "CEME",
+      "avgLatitude": 49.26,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "BUCH",
+      "avgLatitude": 49.27,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "BRKX",
+      "avgLatitude": 49.27,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "BIOL",
+      "avgLatitude": 49.26,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "AUDX",
+      "avgLatitude": 49.27,
+      "avgLongitude": -123.26
+    },
+    {
+      "rooms_shortname": "ANSO",
+      "avgLatitude": 49.27,
+      "avgLongitude": -123.26
+    },
+    {
+      "rooms_shortname": "ANGU",
+      "avgLatitude": 49.26,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "ALRD",
+      "avgLatitude": 49.27,
+      "avgLongitude": -123.25
+    },
+    {
+      "rooms_shortname": "AERL",
+      "avgLatitude": 49.26,
+      "avgLongitude": -123.25
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "title": "valid star",
+  "input": {
+    "WHERE": {
+      "OR": [
+        {"AND": [
+          {
+            "LT": {
+              "courses_avg": 100
+            }
+          },
+          {
+            "GT": {
+              "courses_avg": 99
+            }
+          }
+        ]
+        },
+
+        {"AND": [
+          {
+            "IS": {
+              "courses_dept": "*me*"
+            }
+          },
+          {
+            "GT": {
+              "courses_avg": 95
+            }
+          }
+        ]
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_avg",
+        "courses_dept"
+      ],
+      "ORDER": "courses_avg"
+    }
+  },
+  "errorExpected": false,
+  "expected":[{"courses_avg":95.15,"courses_dept":"bmeg"},{"courses_avg":95.15,"courses_dept":"bmeg"},{"courses_avg":99.19,"courses_dept":"cnps"},{"courses_avg":99.78,"courses_dept":"math"},{"courses_avg":99.78,"courses_dept":"math"}]
+}

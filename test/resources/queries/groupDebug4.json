@@ -1,0 +1,47 @@
+{
+  "title": "group debug",
+  "input": {
+	  "WHERE": {
+		  "AND": [
+			  {
+				  "GT": {
+					  "courses_avg": 98
+				  }
+			  },
+			  {
+				  "LT": {
+					  "courses_pass": 20
+				  }
+			  }
+		  ]
+	  },
+	  "OPTIONS": {
+		  "COLUMNS": [
+			  "countsome",
+			  "courses_pass"
+		  ],
+		  "ORDER": {
+			  "dir": "UP",
+			  "keys": [
+				  "courses_pass",
+				  "countsome"
+			  ]
+		  }
+	  },
+	  "TRANSFORMATIONS": {
+		  "GROUP": [
+			  "courses_pass"
+		  ],
+		  "APPLY": [
+			  {
+				  "countsome": {
+					  "COUNT": "courses_avg"
+				  }
+			  }
+		  ]
+	  }
+  },
+  "errorExpected": false,
+"expected":[{"countsome":1,"courses_pass":9},{"countsome":1,"courses_pass":10},{"countsome":1,"courses_pass":11},
+	{"countsome":3,"courses_pass":12},{"countsome":2,"courses_pass":14},{"countsome":2,"courses_pass":16},{"countsome":1,"courses_pass":17}]
+}

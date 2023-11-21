@@ -1,0 +1,20 @@
+{
+  "title": "not Found Datasets",
+  "input": {
+    "WHERE": {
+      "GT": {
+        "abc_avg": 97
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "abc_avg",
+        "abc_avg"
+      ],
+      "ORDER": "abc_avg"
+    }
+  },
+  "errorExpected": true,
+  "expected":"InsightError"
+
+}

@@ -1,0 +1,45 @@
+{
+  "title": "2DsInGroup",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "GT": {
+            "rooms_lon": 97
+          }
+        },
+        {
+          "GT": {
+            "rooms_lat": 49.265
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "rooms_shortname",
+        "maxLat"
+      ],
+      "ORDER": {
+        "dir": "DOWN",
+        "keys": [
+          "maxLat"
+        ]
+      }
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "courses_avg"
+      ],
+      "APPLY": [
+        {
+          "maxLat": {
+            "MAX": "rooms_lat"
+          }
+        }
+      ]
+    }
+  },
+  "errorExpected": true,
+  "expected": "InsightError"
+}

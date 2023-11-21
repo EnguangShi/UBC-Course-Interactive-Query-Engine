@@ -1,0 +1,22 @@
+{
+  "title": "emptyNOT",
+  "input": {
+    "WHERE": {
+      "NOT": [ "s",
+        {
+          "GT": {
+            "courses_avg": 98
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept"
+      ],
+      "ORDER": "courses_dept"
+    }
+  },
+  "errorExpected": true,
+  "expected": "InsightError"
+}

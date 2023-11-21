@@ -1,0 +1,30 @@
+{
+  "title": "AllCoursesKeysInGroup",
+  "input": {
+	  "WHERE": {
+		  "OR": [
+			  {
+				  "EQ": {
+					  "courses_avg": 101
+				  }
+			  },
+			  {
+				  "IS": {
+					  "courses_dept": "*bc*"
+				  }
+			  }
+		  ]
+	  },
+	  "OPTIONS": {
+		  "COLUMNS": [
+			  "courses_dept",
+			  "courses_id",
+			  "courses_avg"
+		  ],
+		  "ORDER": "courses_avg"
+	  }
+  },
+  "errorExpected": false,
+"expected":[{"courses_dept":"arbc","courses_id":"202","courses_avg":75.4},{"courses_dept":"arbc","courses_id":"202","courses_avg":75.4},{"courses_dept":"arbc","courses_id":"102","courses_avg":79},{"courses_dept":"arbc","courses_id":"102","courses_avg":79},{"courses_dept":"arbc","courses_id":"201","courses_avg":79.86},{"courses_dept":"arbc","courses_id":"201","courses_avg":79.86},{"courses_dept":"arbc","courses_id":"202","courses_avg":79.88},{"courses_dept":"arbc","courses_id":"202","courses_avg":79.88},{"courses_dept":"arbc","courses_id":"101","courses_avg":80},{"courses_dept":"arbc","courses_id":"101","courses_avg":80},{"courses_dept":"arbc","courses_id":"101","courses_avg":80.86},{"courses_dept":"arbc","courses_id":"101","courses_avg":80.86},{"courses_dept":"arbc","courses_id":"102","courses_avg":82.47},
+	{"courses_dept":"arbc","courses_id":"102","courses_avg":82.47},{"courses_dept":"arbc","courses_id":"201","courses_avg":83.13},{"courses_dept":"arbc","courses_id":"201","courses_avg":83.13}]
+}

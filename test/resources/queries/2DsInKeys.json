@@ -1,0 +1,45 @@
+{
+  "title": "2DsInKeys",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "GT": {
+            "rooms_lon": 97
+          }
+        },
+        {
+          "GT": {
+            "rooms_lat": 49.265
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "rooms_shortname",
+        "maxLat"
+      ],
+      "ORDER": {
+        "dir": "DOWN",
+        "keys": [
+          "rcor_shortname"
+        ]
+      }
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "rooms_shortname"
+      ],
+      "APPLY": [
+        {
+          "maxLat": {
+            "MAX": "rooms_lat"
+          }
+        }
+      ]
+    }
+  },
+  "errorExpected": true,
+  "expected": "InsightError"
+}

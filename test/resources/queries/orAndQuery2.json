@@ -1,0 +1,43 @@
+{
+  "title": "AllCoursesKeysInGroup",
+  "input": {
+	  "WHERE": {
+		  "OR": [
+			  {
+				  "AND": [
+					  {
+						  "GT": {
+							  "courses_avg": 98
+						  }
+					  },
+					  {
+						  "IS": {
+							  "courses_dept": "bbcsj"
+						  }
+					  }
+				  ]
+			  },
+			  {
+				  "EQ": {
+					  "courses_avg": 101
+				  }
+			  },
+			  {
+				  "IS": {
+					  "courses_dept": "asdhj"
+				  }
+			  }
+		  ]
+	  },
+	  "OPTIONS": {
+		  "COLUMNS": [
+			  "courses_dept",
+			  "courses_id",
+			  "courses_avg"
+		  ],
+		  "ORDER": "courses_avg"
+	  }
+  },
+  "errorExpected": false,
+"expected":[]
+}

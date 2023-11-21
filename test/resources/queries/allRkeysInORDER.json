@@ -1,0 +1,153 @@
+{
+  "title": "allRkeysInORDER",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "IS": {
+            "rooms_shortname": "*D*"
+          }
+        },
+        {
+          "GT": {
+            "rooms_seats": 20
+          }
+        },
+        {
+          "OR": [
+            {
+              "IS": {
+                "rooms_type": "*Small*"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "rooms_name",
+        "rooms_fullname",
+        "rooms_shortname",
+        "rooms_number",
+        "rooms_type",
+        "rooms_furniture",
+        "rooms_address",
+        "rooms_href",
+        "rooms_seats",
+        "rooms_lat",
+        "rooms_lon"
+      ],
+      "ORDER": {
+        "dir": "DOWN",
+        "keys": [
+          "rooms_name",
+          "rooms_fullname",
+          "rooms_shortname",
+          "rooms_number",
+          "rooms_type",
+          "rooms_furniture",
+          "rooms_address",
+          "rooms_href",
+          "rooms_seats",
+          "rooms_lat",
+          "rooms_lon"
+        ]
+      }
+    }
+  },
+  "errorExpected": false,
+  "expected": [
+    {
+      "rooms_name": "WOOD_G41",
+      "rooms_fullname": "Woodward (Instructional Resources Centre-IRC)",
+      "rooms_shortname": "WOOD",
+      "rooms_number": "G41",
+      "rooms_type": "Small Group",
+      "rooms_furniture": "Classroom-Movable Tables & Chairs",
+      "rooms_address": "2194 Health Sciences Mall",
+      "rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/WOOD-G41",
+      "rooms_seats": 30,
+      "rooms_lat": 49.26478,
+      "rooms_lon": -123.24673
+    },
+    {
+      "rooms_name": "WOOD_B79",
+      "rooms_fullname": "Woodward (Instructional Resources Centre-IRC)",
+      "rooms_shortname": "WOOD",
+      "rooms_number": "B79",
+      "rooms_type": "Small Group",
+      "rooms_furniture": "Classroom-Movable Tablets",
+      "rooms_address": "2194 Health Sciences Mall",
+      "rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/WOOD-B79",
+      "rooms_seats": 21,
+      "rooms_lat": 49.26478,
+      "rooms_lon": -123.24673
+    },
+    {
+      "rooms_name": "WOOD_B75",
+      "rooms_fullname": "Woodward (Instructional Resources Centre-IRC)",
+      "rooms_shortname": "WOOD",
+      "rooms_number": "B75",
+      "rooms_type": "Small Group",
+      "rooms_furniture": "Classroom-Movable Tables & Chairs",
+      "rooms_address": "2194 Health Sciences Mall",
+      "rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/WOOD-B75",
+      "rooms_seats": 30,
+      "rooms_lat": 49.26478,
+      "rooms_lon": -123.24673
+    },
+    {
+      "rooms_name": "MCLD_220",
+      "rooms_fullname": "MacLeod",
+      "rooms_shortname": "MCLD",
+      "rooms_number": "220",
+      "rooms_type": "Small Group",
+      "rooms_furniture": "Classroom-Movable Tables & Chairs",
+      "rooms_address": "2356 Main Mall",
+      "rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/MCLD-220",
+      "rooms_seats": 40,
+      "rooms_lat": 49.26176,
+      "rooms_lon": -123.24935
+    },
+    {
+      "rooms_name": "DMP_201",
+      "rooms_fullname": "Hugh Dempster Pavilion",
+      "rooms_shortname": "DMP",
+      "rooms_number": "201",
+      "rooms_type": "Small Group",
+      "rooms_furniture": "Classroom-Movable Tables & Chairs",
+      "rooms_address": "6245 Agronomy Road V6T 1Z4",
+      "rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/DMP-201",
+      "rooms_seats": 40,
+      "rooms_lat": 49.26125,
+      "rooms_lon": -123.24807
+    },
+    {
+      "rooms_name": "DMP_101",
+      "rooms_fullname": "Hugh Dempster Pavilion",
+      "rooms_shortname": "DMP",
+      "rooms_number": "101",
+      "rooms_type": "Small Group",
+      "rooms_furniture": "Classroom-Movable Tables & Chairs",
+      "rooms_address": "6245 Agronomy Road V6T 1Z4",
+      "rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/DMP-101",
+      "rooms_seats": 40,
+      "rooms_lat": 49.26125,
+      "rooms_lon": -123.24807
+    },
+    {
+      "rooms_name": "AUDX_157",
+      "rooms_fullname": "Auditorium Annex",
+      "rooms_shortname": "AUDX",
+      "rooms_number": "157",
+      "rooms_type": "Small Group",
+      "rooms_furniture": "Classroom-Movable Tables & Chairs",
+      "rooms_address": "1924 West Mall",
+      "rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/AUDX-157",
+      "rooms_seats": 21,
+      "rooms_lat": 49.2666,
+      "rooms_lon": -123.25655
+    }
+  ]
+}

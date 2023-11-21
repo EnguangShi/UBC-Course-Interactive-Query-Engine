@@ -1,0 +1,47 @@
+{
+  "title": "group debug",
+  "input": {
+	  "WHERE": {
+		  "AND": [
+			  {
+				  "GT": {
+					  "courses_avg": 98
+				  }
+			  },
+			  {
+				  "LT": {
+					  "courses_pass": 20
+				  }
+			  }
+		  ]
+	  },
+	  "OPTIONS": {
+		  "COLUMNS": [
+			  "overallAVG",
+			  "courses_pass"
+		  ],
+		  "ORDER": {
+			  "dir": "UP",
+			  "keys": [
+				  "courses_pass",
+				  "overallAVG"
+			  ]
+		  }
+	  },
+	  "TRANSFORMATIONS": {
+		  "GROUP": [
+			  "courses_pass"
+		  ],
+		  "APPLY": [
+			  {
+				  "overallAVG": {
+					  "AVG": "courses_avg"
+				  }
+			  }
+		  ]
+	  }
+  },
+  "errorExpected": false,
+"expected":[{"overallAVG":99.78,"courses_pass":9},{"overallAVG":98.7,"courses_pass":10},{"overallAVG":98.45,"courses_pass":11},{"overallAVG":98.55,"courses_pass":12},
+	{"overallAVG":98.46,"courses_pass":14},{"overallAVG":98.73,"courses_pass":16},{"overallAVG":98.76,"courses_pass":17}]
+}

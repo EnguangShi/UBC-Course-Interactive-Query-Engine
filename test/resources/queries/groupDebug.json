@@ -1,0 +1,48 @@
+{
+  "title": "group debug",
+  "input": {
+	  "WHERE": {
+		  "AND": [
+			  {
+				  "GT": {
+					  "courses_avg": 98
+				  }
+			  },
+			  {
+				  "LT": {
+					  "courses_pass": 20
+				  }
+			  }
+		  ]
+	  },
+	  "OPTIONS": {
+		  "COLUMNS": [
+			  "maxA",
+			  "courses_pass"
+		  ],
+		  "ORDER": {
+			  "dir": "UP",
+			  "keys": [
+				  "courses_pass",
+				  "maxA"
+			  ]
+		  }
+	  },
+	  "TRANSFORMATIONS": {
+		  "GROUP": [
+			  "courses_pass"
+		  ],
+		  "APPLY": [
+			  {
+				  "maxA": {
+					  "MAX": "courses_avg"
+				  }
+			  }
+		  ]
+	  }
+  },
+  "errorExpected": false,
+"expected":[{"maxA":99.78,"courses_pass":9},
+	{"maxA":98.7,"courses_pass":10},{"maxA":98.45,"courses_pass":11},
+	{"maxA":98.75,"courses_pass":12},{"maxA":98.71,"courses_pass":14},{"maxA":99.19,"courses_pass":16},{"maxA":98.76,"courses_pass":17}]
+}

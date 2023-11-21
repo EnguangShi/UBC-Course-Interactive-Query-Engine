@@ -1,0 +1,51 @@
+{
+  "title": "EmptyApplyKey",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "GT": {
+            "courses_avg": 98
+          }
+        },
+        {
+          "LT": {
+            "courses_fail": 5
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_avg",
+        "courses_pass"
+      ],
+      "ORDER": {
+        "dir": "UP",
+        "keys": [
+          "courses_avg"
+        ]
+      }
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "courses_pass",
+        "courses_avg"
+      ],
+      "APPLY": [
+        {
+          "": {
+            "MAX": "courses_avg"
+          }
+        },
+        {
+          "maxAvg": {
+            "MAX": "courses_avg"
+          }
+        }
+      ]
+    }
+  },
+  "errorExpected": true,
+  "expected": "InsightError"
+}

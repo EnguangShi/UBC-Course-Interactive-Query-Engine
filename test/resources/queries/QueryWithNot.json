@@ -1,0 +1,21 @@
+{
+  "title" : "simple Query",
+  "input" : {
+	  "WHERE": {"NOT":{
+		  "GT": {
+			  "courses_avg": 30
+		  }
+	  }},
+	  "OPTIONS": {
+		  "COLUMNS": [
+			  "courses_dept",
+			  "courses_id"
+		  ],
+		  "ORDER": "courses_id"
+	  }
+  },
+  "errorExpected" :false,
+  "expected":[{"courses_dept":"lfs","courses_id":"100"},{"courses_dept":"lfs","courses_id":"100"},{"courses_dept":"frst","courses_id":"202"},{"courses_dept":"busi","courses_id":"330"},{"courses_dept":"busi","courses_id":"330"},{"courses_dept":"fopr","courses_id":"362"},{"courses_dept":"wood","courses_id":"475"}]
+}
+
+

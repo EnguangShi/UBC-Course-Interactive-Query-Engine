@@ -1,0 +1,31 @@
+{
+  "title": "apply has two rules",
+  "input": {
+	  "WHERE": {
+		  "GT": {
+			  "courses_avg": 98
+		  }
+	  },
+	  "OPTIONS": {
+		  "COLUMNS": [
+			  "courses_avg"
+		  ]
+	  },
+	  "TRANSFORMATIONS": {
+		  "GROUP": [
+			  "courses_avg"
+		  ],
+		  "APPLY": [
+			  {
+				  "overallAvg": {
+					  "AVG": "courses_avg",
+					  "MAX": "courses_year"
+				  }
+			  }
+		  ]
+
+	  }
+  },
+  "errorExpected": true,
+  "expected":"InsightError"
+}

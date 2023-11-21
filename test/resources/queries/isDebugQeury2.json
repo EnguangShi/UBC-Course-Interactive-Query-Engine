@@ -1,0 +1,31 @@
+{
+  "title" : "simple Query",
+  "input" : {
+	  "WHERE": {
+		  "AND": [
+			  {
+				  "IS": {
+					  "courses_dept": "bbcds"
+				  }
+			  },
+			  {
+				  "IS": {
+					  "courses_id": "501"
+				  }
+			  }
+		  ]
+	  },
+	  "OPTIONS": {
+		  "COLUMNS": [
+			  "courses_title",
+			  "courses_avg",
+			  "courses_dept"
+		  ],
+		  "ORDER": "courses_avg"
+	  }
+  },
+  "errorExpected" :false,
+	"expected":[]
+}
+
+

@@ -1,0 +1,16 @@
+{
+  "title": "emptyAND",
+  "input": {
+    "WHERE": {
+      "AND": [null, null]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept"
+      ],
+      "ORDER": "courses_dept"
+    }
+  },
+  "errorExpected": true,
+  "expected": "InsightError"
+}

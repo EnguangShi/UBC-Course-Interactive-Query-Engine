@@ -1,0 +1,30 @@
+{
+  "title" : "simple Query",
+  "input" : {
+	  "WHERE": {
+		  "AND": [
+			  {
+				  "IS": {
+					  "courses_dept": "bmeg"
+				  }
+			  },
+			  {
+				  "IS": {
+					  "courses_id": "501"
+				  }
+			  }
+		  ]
+	  },
+	  "OPTIONS": {
+		  "COLUMNS": [
+			  "courses_title",
+			  "courses_avg"
+		  ],
+		  "ORDER": "courses_avg"
+	  }
+  },
+  "errorExpected" :false,
+	"expected":[{"courses_title":"med tech project","courses_avg":87.07},{"courses_title":"med tech project","courses_avg":87.07},{"courses_title":"med tech project","courses_avg":89.06},{"courses_title":"med tech project","courses_avg":89.06},{"courses_title":"med tech project","courses_avg":90.9},{"courses_title":"med tech project","courses_avg":90.9},{"courses_title":"med tech project","courses_avg":95.15},{"courses_title":"med tech project","courses_avg":95.15}]
+}
+
+

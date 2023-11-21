@@ -1,0 +1,27 @@
+{
+   "title": "asterick  right only",
+   "input":{
+    "WHERE": {
+      "AND": [
+        {
+          "IS": {
+            "courses_dept": "a*"
+          }
+        },
+        {
+          "GT": {
+            "courses_avg": 95
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": ["courses_dept",
+        "courses_id",
+        "courses_avg"
+      ],
+      "ORDER": "courses_id"
+    }
+  },
+   "errorExpected": false,
+   "expected":[{"courses_dept":"apsc","courses_id":"279","courses_avg":95.95},{"courses_dept":"apsc","courses_id":"279","courses_avg":95.05},{"courses_dept":"apsc","courses_id":"279","courses_avg":96},{"courses_dept":"apsc","courses_id":"279","courses_avg":95.94},{"courses_dept":"adhe","courses_id":"329","courses_avg":96.11},{"courses_dept":"arst","courses_id":"550","courses_avg":96.94},{"courses_dept":"arst","courses_id":"550","courses_avg":96.94},{"courses_dept":"audi","courses_id":"568","courses_avg":96.9},{"courses_dept":"audi","courses_id":"568","courses_avg":96.9}]}

@@ -1,0 +1,46 @@
+{
+  "title": "Duplicate APPLY key",
+  "input": {
+	  "WHERE": {
+		  "AND": [
+			  {
+				  "GT": {
+					  "rooms_lon": 97
+				  }
+			  },
+			  {
+				  "GT": {
+					  "rooms_lat": 49.265
+				  }
+			  }
+		  ]
+	  },
+	  "OPTIONS": {
+		  "COLUMNS": [
+			  "rooms_shortname",
+			  "abc"
+		  ],
+		  "ORDER": {
+			  "dir": "DOWN",
+			  "keys": [
+				  "abc"
+			  ]
+		  }
+	  },
+	  "TRANSFORMATIONS": {
+		  "GROUP": [
+			  "abc",
+			  "rooms_shortname"
+		  ],
+		  "APPLY": [
+			  {
+				  "abc": {
+					  "MAX": "courses_lat"
+				  }
+			  }
+		  ]
+	  }
+  },
+  "errorExpected": true,
+  "expected":"InsightError"
+}

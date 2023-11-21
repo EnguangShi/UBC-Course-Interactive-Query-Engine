@@ -1,0 +1,233 @@
+{
+  "title": "countLatLon",
+  "input": {
+    "WHERE": {
+      "IS": {
+        "rooms_furniture": "*Tables*"
+      }
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "rooms_shortname",
+        "countLat",
+        "countLon"
+      ],
+      "ORDER": {
+        "dir": "DOWN",
+        "keys": [
+          "rooms_shortname"
+        ]
+      }
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "rooms_shortname"
+      ],
+      "APPLY": [
+        {
+          "countLat": {
+            "COUNT": "rooms_lat"
+          }
+        },
+        {
+          "countLon": {
+            "COUNT": "rooms_lon"
+          }
+        }
+      ]
+    }
+  },
+  "errorExpected": false,
+  "expected": [
+    {
+      "rooms_shortname": "WOOD",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "UCLL",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "SWNG",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "SRC",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "SPPH",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "SOWK",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "SCRF",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "PHRM",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "PCOH",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "OSBO",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "ORCH",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "MCML",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "MCLD",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "MATH",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "LSK",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "LSC",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "LASR",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "IONA",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "IBLC",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "HENN",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "HEBB",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "GEOG",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "FSC",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "FRDM",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "FORW",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "FNH",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "ESB",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "EOSM",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "DMP",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "CHBE",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "CEME",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "BUCH",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "BRKX",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "BIOL",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "AUDX",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "ANSO",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "ANGU",
+      "countLat": 1,
+      "countLon": 1
+    },
+    {
+      "rooms_shortname": "ALRD",
+      "countLat": 1,
+      "countLon": 1
+    }
+  ]
+}

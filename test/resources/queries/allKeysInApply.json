@@ -1,0 +1,574 @@
+{
+  "title": "AllKeysInApply",
+  "input": {
+    "WHERE": {
+      "OR": [
+        {
+          "LT": {
+            "rooms_lon": -123.25
+          }
+        },
+        {
+          "GT": {
+            "rooms_lat": 49.265
+          }
+        },
+        {
+          "EQ": {
+            "rooms_seats": 25
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "rooms_shortname",
+        "maxLat",
+        "maxLon",
+        "avgSeats",
+        "countName",
+        "countShortname",
+        "countFullname",
+        "countNumber",
+        "countAddress",
+        "countType",
+        "countFurniture",
+        "countHref"
+      ],
+      "ORDER": {
+        "dir": "DOWN",
+        "keys": [
+          "rooms_shortname",
+          "avgSeats"
+        ]
+      }
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "rooms_shortname"
+      ],
+      "APPLY": [
+        {
+          "maxLat": {
+            "MAX": "rooms_lat"
+          }
+        },
+        {
+          "maxLon": {
+            "MAX": "rooms_lon"
+          }
+        },
+        {
+          "countName": {
+            "COUNT": "rooms_name"
+          }
+        },
+        {
+          "countShortname": {
+            "COUNT": "rooms_shortname"
+          }
+        },
+        {
+          "countFullname": {
+            "COUNT": "rooms_fullname"
+          }
+        },
+        {
+          "countNumber": {
+            "COUNT": "rooms_number"
+          }
+        },
+        {
+          "countAddress": {
+            "COUNT": "rooms_address"
+          }
+        },
+        {
+          "countType": {
+            "COUNT": "rooms_type"
+          }
+        },
+        {
+          "countFurniture": {
+            "COUNT": "rooms_furniture"
+          }
+        },
+        {
+          "countHref": {
+            "COUNT": "rooms_href"
+          }
+        },
+        {
+          "avgSeats": {
+            "AVG": "rooms_seats"
+          }
+        }
+      ]
+    }
+  },
+  "errorExpected": false,
+  "expected": [
+    {
+      "rooms_shortname": "WESB",
+      "maxLat": 49.26517,
+      "maxLon": -123.24937,
+      "avgSeats": 213.5,
+      "countName": 2,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 2,
+      "countAddress": 1,
+      "countType": 1,
+      "countFurniture": 1,
+      "countHref": 2
+    },
+    {
+      "rooms_shortname": "UCLL",
+      "maxLat": 49.26867,
+      "maxLon": -123.25692,
+      "avgSeats": 40.75,
+      "countName": 4,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 4,
+      "countAddress": 1,
+      "countType": 3,
+      "countFurniture": 3,
+      "countHref": 4
+    },
+    {
+      "rooms_shortname": "SWNG",
+      "maxLat": 49.26293,
+      "maxLon": -123.25431,
+      "avgSeats": 64.59,
+      "countName": 22,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 22,
+      "countAddress": 1,
+      "countType": 3,
+      "countFurniture": 3,
+      "countHref": 22
+    },
+    {
+      "rooms_shortname": "SRC",
+      "maxLat": 49.2683,
+      "maxLon": -123.24894,
+      "avgSeats": 299,
+      "countName": 3,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 3,
+      "countAddress": 1,
+      "countType": 1,
+      "countFurniture": 1,
+      "countHref": 3
+    },
+    {
+      "rooms_shortname": "SOWK",
+      "maxLat": 49.2643,
+      "maxLon": -123.25505,
+      "avgSeats": 28.71,
+      "countName": 7,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 7,
+      "countAddress": 1,
+      "countType": 2,
+      "countFurniture": 2,
+      "countHref": 7
+    },
+    {
+      "rooms_shortname": "SCRF",
+      "maxLat": 49.26398,
+      "maxLon": -123.2531,
+      "avgSeats": 45.64,
+      "countName": 22,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 22,
+      "countAddress": 1,
+      "countType": 2,
+      "countFurniture": 3,
+      "countHref": 22
+    },
+    {
+      "rooms_shortname": "PCOH",
+      "maxLat": 49.264,
+      "maxLon": -123.2559,
+      "avgSeats": 30,
+      "countName": 8,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 8,
+      "countAddress": 1,
+      "countType": 2,
+      "countFurniture": 3,
+      "countHref": 8
+    },
+    {
+      "rooms_shortname": "ORCH",
+      "maxLat": 49.26048,
+      "maxLon": -123.24944,
+      "avgSeats": 25,
+      "countName": 10,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 10,
+      "countAddress": 1,
+      "countType": 2,
+      "countFurniture": 3,
+      "countHref": 10
+    },
+    {
+      "rooms_shortname": "MGYM",
+      "maxLat": 49.2663,
+      "maxLon": -123.2466,
+      "avgSeats": 32.5,
+      "countName": 2,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 2,
+      "countAddress": 1,
+      "countType": 1,
+      "countFurniture": 1,
+      "countHref": 2
+    },
+    {
+      "rooms_shortname": "MCML",
+      "maxLat": 49.26114,
+      "maxLon": -123.25027,
+      "avgSeats": 30.16,
+      "countName": 19,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 19,
+      "countAddress": 1,
+      "countType": 4,
+      "countFurniture": 4,
+      "countHref": 19
+    },
+    {
+      "rooms_shortname": "MATX",
+      "maxLat": 49.266089,
+      "maxLon": -123.254816,
+      "avgSeats": 106,
+      "countName": 1,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 1,
+      "countAddress": 1,
+      "countType": 1,
+      "countFurniture": 1,
+      "countHref": 1
+    },
+    {
+      "rooms_shortname": "MATH",
+      "maxLat": 49.266463,
+      "maxLon": -123.255534,
+      "avgSeats": 61.88,
+      "countName": 8,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 8,
+      "countAddress": 1,
+      "countType": 3,
+      "countFurniture": 3,
+      "countHref": 8
+    },
+    {
+      "rooms_shortname": "LSK",
+      "maxLat": 49.26545,
+      "maxLon": -123.25533,
+      "avgSeats": 126.25,
+      "countName": 4,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 4,
+      "countAddress": 1,
+      "countType": 2,
+      "countFurniture": 2,
+      "countHref": 4
+    },
+    {
+      "rooms_shortname": "LASR",
+      "maxLat": 49.26767,
+      "maxLon": -123.25583,
+      "avgSeats": 54.17,
+      "countName": 6,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 6,
+      "countAddress": 1,
+      "countType": 4,
+      "countFurniture": 4,
+      "countHref": 6
+    },
+    {
+      "rooms_shortname": "IONA",
+      "maxLat": 49.27106,
+      "maxLon": -123.25042,
+      "avgSeats": 75,
+      "countName": 2,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 2,
+      "countAddress": 1,
+      "countType": 2,
+      "countFurniture": 2,
+      "countHref": 2
+    },
+    {
+      "rooms_shortname": "IBLC",
+      "maxLat": 49.26766,
+      "maxLon": -123.2521,
+      "avgSeats": 31.56,
+      "countName": 18,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 18,
+      "countAddress": 1,
+      "countType": 4,
+      "countFurniture": 5,
+      "countHref": 18
+    },
+    {
+      "rooms_shortname": "HENN",
+      "maxLat": 49.26627,
+      "maxLon": -123.25374,
+      "avgSeats": 109.67,
+      "countName": 6,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 6,
+      "countAddress": 1,
+      "countType": 2,
+      "countFurniture": 2,
+      "countHref": 6
+    },
+    {
+      "rooms_shortname": "HEBB",
+      "maxLat": 49.2661,
+      "maxLon": -123.25165,
+      "avgSeats": 134.25,
+      "countName": 4,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 4,
+      "countAddress": 1,
+      "countType": 2,
+      "countFurniture": 2,
+      "countHref": 4
+    },
+    {
+      "rooms_shortname": "GEOG",
+      "maxLat": 49.26605,
+      "maxLon": -123.25623,
+      "avgSeats": 77.38,
+      "countName": 8,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 8,
+      "countAddress": 1,
+      "countType": 3,
+      "countFurniture": 4,
+      "countHref": 8
+    },
+    {
+      "rooms_shortname": "FRDM",
+      "maxLat": 49.26541,
+      "maxLon": -123.24608,
+      "avgSeats": 160,
+      "countName": 1,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 1,
+      "countAddress": 1,
+      "countType": 1,
+      "countFurniture": 1,
+      "countHref": 1
+    },
+    {
+      "rooms_shortname": "FORW",
+      "maxLat": 49.26176,
+      "maxLon": -123.25179,
+      "avgSeats": 47.33,
+      "countName": 3,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 3,
+      "countAddress": 1,
+      "countType": 2,
+      "countFurniture": 2,
+      "countHref": 3
+    },
+    {
+      "rooms_shortname": "ESB",
+      "maxLat": 49.26274,
+      "maxLon": -123.25224,
+      "avgSeats": 193.33,
+      "countName": 3,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 3,
+      "countAddress": 1,
+      "countType": 1,
+      "countFurniture": 3,
+      "countHref": 3
+    },
+    {
+      "rooms_shortname": "EOSM",
+      "maxLat": 49.26228,
+      "maxLon": -123.25198,
+      "avgSeats": 50,
+      "countName": 1,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 1,
+      "countAddress": 1,
+      "countType": 1,
+      "countFurniture": 1,
+      "countHref": 1
+    },
+    {
+      "rooms_shortname": "CIRS",
+      "maxLat": 49.26207,
+      "maxLon": -123.25314,
+      "avgSeats": 426,
+      "countName": 1,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 1,
+      "countAddress": 1,
+      "countType": 1,
+      "countFurniture": 1,
+      "countHref": 1
+    },
+    {
+      "rooms_shortname": "CHEM",
+      "maxLat": 49.2659,
+      "maxLon": -123.25308,
+      "avgSeats": 152.17,
+      "countName": 6,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 6,
+      "countAddress": 1,
+      "countType": 1,
+      "countFurniture": 1,
+      "countHref": 6
+    },
+    {
+      "rooms_shortname": "BUCH",
+      "maxLat": 49.26826,
+      "maxLon": -123.25468,
+      "avgSeats": 52.3,
+      "countName": 61,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 61,
+      "countAddress": 1,
+      "countType": 4,
+      "countFurniture": 7,
+      "countHref": 61
+    },
+    {
+      "rooms_shortname": "BRKX",
+      "maxLat": 49.26862,
+      "maxLon": -123.25237,
+      "avgSeats": 47,
+      "countName": 2,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 2,
+      "countAddress": 1,
+      "countType": 2,
+      "countFurniture": 2,
+      "countHref": 2
+    },
+    {
+      "rooms_shortname": "BIOL",
+      "maxLat": 49.26479,
+      "maxLon": -123.25249,
+      "avgSeats": 84,
+      "countName": 4,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 4,
+      "countAddress": 1,
+      "countType": 2,
+      "countFurniture": 3,
+      "countHref": 4
+    },
+    {
+      "rooms_shortname": "AUDX",
+      "maxLat": 49.2666,
+      "maxLon": -123.25655,
+      "avgSeats": 20.5,
+      "countName": 2,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 2,
+      "countAddress": 1,
+      "countType": 1,
+      "countFurniture": 1,
+      "countHref": 2
+    },
+    {
+      "rooms_shortname": "ANSO",
+      "maxLat": 49.26958,
+      "maxLon": -123.25741,
+      "avgSeats": 46.5,
+      "countName": 4,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 4,
+      "countAddress": 1,
+      "countType": 2,
+      "countFurniture": 3,
+      "countHref": 4
+    },
+    {
+      "rooms_shortname": "ANGU",
+      "maxLat": 49.26486,
+      "maxLon": -123.25364,
+      "avgSeats": 55.21,
+      "countName": 28,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 28,
+      "countAddress": 1,
+      "countType": 5,
+      "countFurniture": 2,
+      "countHref": 28
+    },
+    {
+      "rooms_shortname": "ALRD",
+      "maxLat": 49.2699,
+      "maxLon": -123.25318,
+      "avgSeats": 45.6,
+      "countName": 5,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 5,
+      "countAddress": 1,
+      "countType": 2,
+      "countFurniture": 2,
+      "countHref": 5
+    },
+    {
+      "rooms_shortname": "AERL",
+      "maxLat": 49.26372,
+      "maxLon": -123.25099,
+      "avgSeats": 144,
+      "countName": 1,
+      "countShortname": 1,
+      "countFullname": 1,
+      "countNumber": 1,
+      "countAddress": 1,
+      "countType": 1,
+      "countFurniture": 1,
+      "countHref": 1
+    }
+  ]
+}

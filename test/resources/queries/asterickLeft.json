@@ -1,0 +1,30 @@
+{
+   "title": "asterick left only",
+   "input":{
+	   "WHERE": {
+		   "AND": [
+			   {
+				   "IS": {
+					   "courses_dept": "*b"
+				   }
+			   },
+			   {
+				   "LT": {
+					   "courses_avg": 65
+				   }
+			   }
+		   ]
+	   },
+	   "OPTIONS": {
+		   "COLUMNS": [
+			   "courses_dept",
+			   "courses_id",
+			   "courses_avg"
+		   ],
+		   "ORDER": "courses_id"
+	   }
+   },
+   "errorExpected": false,
+"expected":[{"courses_dept":"geob","courses_id":"102","courses_avg":63.88},{"courses_dept":"geob","courses_id":"103","courses_avg":62.81},{"courses_dept":"micb","courses_id":"201","courses_avg":63.59},
+	{"courses_dept":"micb","courses_id":"201","courses_avg":64.77},{"courses_dept":"micb","courses_id":"201","courses_avg":64.77},{"courses_dept":"micb","courses_id":"201","courses_avg":64.77}]
+}

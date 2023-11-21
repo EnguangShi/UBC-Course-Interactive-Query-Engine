@@ -1,0 +1,21 @@
+{
+  "title": "valid star with is",
+  "input": {
+
+	"WHERE": {
+		"IS": {
+			"courses_dept": "*ab*"
+		}
+	},
+	"OPTIONS": {
+		"COLUMNS": [
+			"courses_dept",
+			"courses_id"
+		],
+		"ORDER": "courses_dept"
+	}
+
+  },
+  "errorExpected": false,
+  "expected":[{"courses_dept":"babs","courses_id":"502"},{"courses_dept":"babs","courses_id":"502"},{"courses_dept":"babs","courses_id":"502"},{"courses_dept":"babs","courses_id":"502"},{"courses_dept":"babs","courses_id":"502"},{"courses_dept":"babs","courses_id":"502"},{"courses_dept":"babs","courses_id":"502"},{"courses_dept":"babs","courses_id":"502"},{"courses_dept":"babs","courses_id":"502"},{"courses_dept":"babs","courses_id":"502"},{"courses_dept":"babs","courses_id":"502"},{"courses_dept":"babs","courses_id":"502"},{"courses_dept":"babs","courses_id":"502"},{"courses_dept":"babs","courses_id":"502"},{"courses_dept":"babs","courses_id":"502"},{"courses_dept":"babs","courses_id":"502"},{"courses_dept":"babs","courses_id":"502"},{"courses_dept":"babs","courses_id":"502"},{"courses_dept":"babs","courses_id":"540"},{"courses_dept":"babs","courses_id":"540"},{"courses_dept":"babs","courses_id":"540"},{"courses_dept":"babs","courses_id":"540"},{"courses_dept":"babs","courses_id":"540"},{"courses_dept":"babs","courses_id":"540"},{"courses_dept":"babs","courses_id":"540"},{"courses_dept":"babs","courses_id":"540"},{"courses_dept":"babs","courses_id":"540"},{"courses_dept":"babs","courses_id":"540"},{"courses_dept":"babs","courses_id":"540"},{"courses_dept":"babs","courses_id":"540"},{"courses_dept":"babs","courses_id":"540"},{"courses_dept":"babs","courses_id":"540"},{"courses_dept":"babs","courses_id":"550"},{"courses_dept":"babs","courses_id":"550"},{"courses_dept":"babs","courses_id":"550"},{"courses_dept":"babs","courses_id":"550"},{"courses_dept":"babs","courses_id":"550"},{"courses_dept":"babs","courses_id":"550"},{"courses_dept":"babs","courses_id":"550"},{"courses_dept":"babs","courses_id":"550"},{"courses_dept":"babs","courses_id":"550"},{"courses_dept":"babs","courses_id":"550"},{"courses_dept":"babs","courses_id":"550"},{"courses_dept":"babs","courses_id":"550"},{"courses_dept":"babs","courses_id":"550"},{"courses_dept":"babs","courses_id":"550"},{"courses_dept":"babs","courses_id":"550"},{"courses_dept":"babs","courses_id":"550"},{"courses_dept":"babs","courses_id":"550"},{"courses_dept":"babs","courses_id":"550"},{"courses_dept":"babs","courses_id":"550"},{"courses_dept":"babs","courses_id":"550"}]
+}

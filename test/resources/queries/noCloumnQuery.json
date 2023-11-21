@@ -1,0 +1,43 @@
+{
+  "title": "no column",
+  "input": {
+    "WHERE": {
+      "OR": [
+        {"AND": [
+          {
+            "LT": {
+              "courses_avg": 100
+            }
+          },
+          {
+            "GT": {
+              "courses_avg": 99
+            }
+          }
+        ]
+        },
+
+        {"AND": [
+          {
+            "IS": {
+              "courses_dept": "bmeg"
+            }
+          },
+          {
+            "GT": {
+              "courses_avg": 95
+            }
+          }
+        ]
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+      ],
+      "ORDER": "courses_avg"
+    }
+  },
+  "errorExpected": true,
+  "expected":"InsightError"
+}

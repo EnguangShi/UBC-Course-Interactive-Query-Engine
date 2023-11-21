@@ -1,0 +1,38 @@
+{
+  "title": "AllCoursesKeysInGroup",
+  "input": {
+	  "WHERE": {
+		  "GT": {
+			  "rooms_seats": 200
+		  }
+	  },
+	  "OPTIONS": {
+		  "COLUMNS": [
+			  "rooms_shortname",
+			  "max"
+		  ],
+		  "ORDER": {
+			  "dir": "UP",
+			  "keys": [
+				  "max"
+			  ]
+		  }
+	  },
+	  "TRANSFORMATIONS": {
+		  "GROUP": [
+			  "rooms_shortname",
+			  "rooms_furniture"
+		  ],
+		  "APPLY": [
+			  {
+				  "max": {
+					  "MAX": "rooms_seats"
+				  }
+			  }
+		  ]
+	  }
+  },
+  "errorExpected": false,
+"expected":[{"rooms_shortname":"LSK","max":205},{"rooms_shortname":"MATH","max":224},{"rooms_shortname":"GEOG","max":225},{"rooms_shortname":"BIOL","max":228},{"rooms_shortname":"PHRM","max":236},{"rooms_shortname":"FSC","max":250},{"rooms_shortname":"HENN","max":257},{"rooms_shortname":"ANGU","max":260},
+	{"rooms_shortname":"CHEM","max":265},{"rooms_shortname":"BUCH","max":275},{"rooms_shortname":"SCRF","max":280},{"rooms_shortname":"SRC","max":299},{"rooms_shortname":"WESB","max":325},{"rooms_shortname":"ESB","max":350},{"rooms_shortname":"LSC","max":350},{"rooms_shortname":"HEBB","max":375},{"rooms_shortname":"CIRS","max":426},{"rooms_shortname":"OSBO","max":442},{"rooms_shortname":"WOOD","max":503}]
+}

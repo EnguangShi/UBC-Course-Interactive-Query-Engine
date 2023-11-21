@@ -1,0 +1,26 @@
+{
+  "title" : "simple Query with object order",
+  "input" : {
+	  "WHERE": {
+		  "GT": {
+			  "courses_avg": 99
+		  }
+	  },
+	  "OPTIONS": {
+		  "COLUMNS": [
+			  "courses_dept",
+			  "courses_id"
+		  ],
+		  "ORDER": {
+			  "dir": "DOWN",
+			  "keys": [
+				  "courses_id"
+			  ]
+		  }
+	  }
+  },
+  "errorExpected" :false,
+  "expected": [{"courses_dept":"cnps","courses_id":"574"},{"courses_dept":"math","courses_id":"527"},
+	  {"courses_dept":"math","courses_id":"527"}]
+}
+

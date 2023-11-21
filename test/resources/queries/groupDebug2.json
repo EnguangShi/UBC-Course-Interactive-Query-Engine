@@ -1,0 +1,33 @@
+{
+  "title": "group debug",
+  "input": {
+	  "WHERE": {
+		  "AND": [
+			  {
+				  "GT": {
+					  "courses_avg": 98
+				  }
+			  },
+			  {
+				  "LT": {
+					  "courses_pass": 20
+				  }
+			  }
+		  ]
+	  },
+	  "OPTIONS": {
+		  "COLUMNS": [
+			  "courses_pass"
+		  ],
+		  "ORDER": {
+			  "dir": "UP",
+			  "keys": [
+				  "courses_pass"
+			  ]
+		  }
+	  }
+  },
+  "errorExpected": false,
+"expected":[{"courses_pass":9},{"courses_pass":9},{"courses_pass":10},{"courses_pass":11},{"courses_pass":11},{"courses_pass":12},{"courses_pass":12},{"courses_pass":12},
+	{"courses_pass":12},{"courses_pass":12},{"courses_pass":14},{"courses_pass":14},{"courses_pass":14},{"courses_pass":14},{"courses_pass":16},{"courses_pass":16},{"courses_pass":16},{"courses_pass":17},{"courses_pass":17}]
+}

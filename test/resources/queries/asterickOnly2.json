@@ -1,0 +1,27 @@
+{
+   "title": "asterick only",
+   "input": {
+      "WHERE": {
+        "AND": [
+          {
+            "IS": {
+              "courses_dept": "**"
+            }
+          },
+          {
+            "GT": {
+              "courses_avg": 99
+            }
+          }
+        ]
+      },
+      "OPTIONS": {
+        "COLUMNS": [
+          "courses_id",
+          "courses_avg"
+        ],
+        "ORDER": "courses_id"
+      }
+    } ,
+   "errorExpected": false,
+   "expected":[{"courses_id":"527","courses_avg":99.78},{"courses_id":"527","courses_avg":99.78},{"courses_id":"574","courses_avg":99.19}]}

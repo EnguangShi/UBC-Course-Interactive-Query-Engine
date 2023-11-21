@@ -1,0 +1,16 @@
+{
+  "title": "emptyNOT",
+  "input": {
+    "WHERE": {
+      "NOT": null
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "courses_dept"
+      ],
+      "ORDER": "courses_dept"
+    }
+  },
+  "errorExpected": true,
+  "expected": "InsightError"
+}

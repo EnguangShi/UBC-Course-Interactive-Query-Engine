@@ -1,0 +1,118 @@
+{
+  "title": "AllKeysinGroup",
+  "input": {
+    "WHERE": {
+      "AND": [
+        {
+          "IS": {
+            "rooms_furniture": "*Tablets*"
+          }
+        },
+        {
+          "LT": {
+            "rooms_seats": 20
+          }
+        }
+      ]
+    },
+    "OPTIONS": {
+      "COLUMNS": [
+        "rooms_lat",
+        "rooms_lon",
+        "rooms_fullname",
+        "rooms_shortname",
+        "rooms_number",
+        "rooms_name",
+        "rooms_address",
+        "rooms_type",
+        "rooms_furniture",
+        "rooms_href",
+        "countName"
+      ],
+      "ORDER": {
+        "dir": "UP",
+        "keys": [
+          "countName",
+          "rooms_href"
+        ]
+      }
+    },
+    "TRANSFORMATIONS": {
+      "GROUP": [
+        "rooms_lat",
+        "rooms_lon",
+        "rooms_fullname",
+        "rooms_shortname",
+        "rooms_number",
+        "rooms_name",
+        "rooms_address",
+        "rooms_type",
+        "rooms_furniture",
+        "rooms_href",
+        "rooms_seats"
+      ],
+      "APPLY": [
+        {
+          "countName": {
+            "COUNT": "rooms_shortname"
+          }
+        }
+      ]
+    }
+  },
+  "errorExpected": false,
+  "expected": [
+    {
+      "rooms_lat": 49.26414,
+      "rooms_lon": -123.24959,
+      "rooms_fullname": "Food, Nutrition and Health",
+      "rooms_shortname": "FNH",
+      "rooms_number": "20",
+      "rooms_name": "FNH_20",
+      "rooms_address": "2205 East Mall",
+      "rooms_type": "Small Group",
+      "rooms_furniture": "Classroom-Movable Tablets",
+      "rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/FNH-20",
+      "countName": 1
+    },
+    {
+      "rooms_lat": 49.26048,
+      "rooms_lon": -123.24944,
+      "rooms_fullname": "Orchard Commons",
+      "rooms_shortname": "ORCH",
+      "rooms_number": "3062",
+      "rooms_name": "ORCH_3062",
+      "rooms_address": "6363 Agronomy Road",
+      "rooms_type": "Open Design General Purpose",
+      "rooms_furniture": "Classroom-Movable Tablets",
+      "rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-3062",
+      "countName": 1
+    },
+    {
+      "rooms_lat": 49.26048,
+      "rooms_lon": -123.24944,
+      "rooms_fullname": "Orchard Commons",
+      "rooms_shortname": "ORCH",
+      "rooms_number": "3068",
+      "rooms_name": "ORCH_3068",
+      "rooms_address": "6363 Agronomy Road",
+      "rooms_type": "Open Design General Purpose",
+      "rooms_furniture": "Classroom-Movable Tablets",
+      "rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-3068",
+      "countName": 1
+    },
+    {
+      "rooms_lat": 49.26048,
+      "rooms_lon": -123.24944,
+      "rooms_fullname": "Orchard Commons",
+      "rooms_shortname": "ORCH",
+      "rooms_number": "3072",
+      "rooms_name": "ORCH_3072",
+      "rooms_address": "6363 Agronomy Road",
+      "rooms_type": "Open Design General Purpose",
+      "rooms_furniture": "Classroom-Movable Tablets",
+      "rooms_href": "http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/ORCH-3072",
+      "countName": 1
+    }
+  ]
+}
